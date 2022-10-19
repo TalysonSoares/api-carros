@@ -7,11 +7,11 @@ const eachRequest = (request, response) => {
     //Definindo o tipo de resposta para o json
     response.setHeader('Content-Type', 'application/json')
 
-    //pegando a URL acessada na request pelo cliente http
-    let route = request.url;
+    //pegando a URL e o metodo acessado na request pelo cliente http
+    let {url, method} = request;
 
     //definindo conteudo da resposta
-    let content = JSON.stringify("Testando "+route)
+    let content = JSON.stringify(method + "Testando "+url)
     
     //respondendo pro httpClient
     response.end(content);
