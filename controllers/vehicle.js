@@ -1,15 +1,23 @@
 function add(){
-    return "Cadastrando Veiculo"
+    return "Cadastrando Veiculo";
 }
 
 function list() {
-    return "Listando Veiculo"
+    return "Listando Veiculo";
 }
 
 function uptade() {
-    return "Editando Veiculo"
+    return "Editando Veiculo";
 } 
 
 function remove() {
-    return "Excluindo Veiculo"
+    return "Excluindo Veiculo";
 }
+
+module.exports = {
+    //add: add,
+    add,
+    list,
+    uptade,
+    remove,
+};

@@ -1,17 +1,17 @@
 function add(){
-    return "Cadastrando Cliente"
+    return "Cadastrando Cliente";
 }
 
 function list() {
-    return "Listando Cliente"
+    return "Listando Cliente";
 }
 
 function uptade() {
-    return "Editando Cliente"
+    return "Editando Cliente";
 } 
 
 function remove() {
-    return "Excluindo Cliente"
+    return "Excluindo Cliente";
 }
 
 module.exports = {
