@@ -1,7 +1,6 @@
 const http = require('http');
 
-const host = 'localhost';
-const port = '8000';
+
 
 //função que é executada a cada request
 const eachRequest = (request, response) => {
@@ -15,4 +14,5 @@ const eachRequest = (request, response) => {
     response.end(content);
 };
 
-const server = http.createServer(eachRequest);
+//Criando servidor web
+module.exports = http.createServer(eachRequest);
