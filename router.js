@@ -1,11 +1,15 @@
 const routes = {
     '/customers': {
-        'GET': 'Cadastro do cliente',
-        'POST': 'listagem do cliente',
+        'GET': 'Cadastro do clientes',
+        'POST': 'listagem do clientes',
+        'PATCH': 'Editar clientes',
+        'DELETE': 'Excluir clientes',
     },
     '/vehicles': {
         'GET': 'Cadastro do Veiculo',
-        'POST': 'listagem do veiculos',
+        'POST': 'listagem do Veiculos',
+        'PATCH': 'Editar Veiculos',
+        'DELETE': 'Excluir clientes',
     },
 }
 
