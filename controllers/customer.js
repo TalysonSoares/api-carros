@@ -13,3 +13,11 @@ function uptade() {
 function remove() {
     return "Excluindo Cliente"
 }
+
+module.exports = {
+    //add: add,
+    add,
+    list,
+    uptade,
+    remove,
+};
