@@ -20,11 +20,11 @@ function router(url, method) {
     //o method representa qual fuunction do controller vai ser executada
 
     if (!routes[url]) {
-        return "404";
+        throw "404"; //gerando o erro customizado
     }
 
     if (!routes[url][method]) {
-        return "Metodo não permitido"
+        throw "405"; //gerando o erro customizado
     }
 
 }

@@ -13,10 +13,19 @@ const eachRequest = (request, response) => {
     //let method = request.method
     let {url, method} = request;
 
-    //definindo conteudo da resposta
-    let content = JSON.stringify(
+
+    let content = ""
+    //tenta executar esse codigo
+    try {
+        //definindo conteudo da resposta
+        content = JSON.stringify(
         router(url, method)
     )
+    } catch (error) { //se der erro algum erro, executa esse daqui
+        response.writeHead(error)
+    }
+
+
     
     //respondendo pro httpClient
     response.end(content);
