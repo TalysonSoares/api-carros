@@ -1,4 +1,5 @@
 const http = require('http');
+const router = require('./router')
 
 
 
@@ -8,10 +9,14 @@ const eachRequest = (request, response) => {
     response.setHeader('Content-Type', 'application/json')
 
     //pegando a URL e o metodo acessado na request pelo cliente http
+    //let url = request.url
+    //let method = request.method
     let {url, method} = request;
 
     //definindo conteudo da resposta
-    let content = JSON.stringify(method + "Testando "+url)
+    let content = JSON.stringify(
+        router(url, method)
+    )
     
     //respondendo pro httpClient
     response.end(content);
