@@ -20,15 +20,11 @@ function router(url, method) {
     //o method representa qual fuunction do controller vai ser executada
 
     if (!routes[url]) {
-        return "404"
+        return "404";
     }
 
-    if (url === '/customers') {
-        return "Controller do clinte";
-    }
-
-    if (url === '/vehicles') {
-        return "Controller do veiculo";
+    if (!routes[url][method]) {
+        return "Metodo não permitido"
     }
 
 }
