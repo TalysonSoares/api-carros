@@ -1,15 +1,18 @@
+const customer = require('./controllers/customer');
+const vehicle = require('./controllers/vehicle')
+
 const routes = {
     '/customers': {
-        'GET': 'Cadastro do clientes',
-        'POST': 'listagem do clientes',
-        'PATCH': 'Editar clientes',
-        'DELETE': 'Excluir clientes',
+        'GET': customer.list,
+        'POST': customer.add,
+        'PATCH': customer.update,
+        'DELETE': customer.remove,
     },
     '/vehicles': {
-        'GET': 'Cadastro do Veiculo',
-        'POST': 'listagem do Veiculos',
-        'PATCH': 'Editar Veiculos',
-        'DELETE': 'Excluir clientes',
+        'GET': vehicle.list,
+        'POST': vehicle.add,
+        'PATCH': vehicle.update,
+        'DELETE': vehicle.remove,
     },
 }
 
@@ -27,6 +30,7 @@ function router(url, method) {
         throw "405"; //gerando o erro customizado
     }
 
+    return 
 }
 
 module.exports = router;

@@ -3,7 +3,16 @@ function add(){
 }
 
 function list() {
-    return "Listando Cliente";
+    return [
+        {
+            id: 1,
+            name: 'Chiquim',
+        },
+        {
+            id: 2,
+            name: 'Maria',
+        },
+    ];
 }
 
 function uptade() {
